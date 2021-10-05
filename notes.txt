@@ -1,0 +1,22 @@
+-> db structures :
+	User
+		id, name
+	UserMeta
+		id, user_id, country
+	Post
+		id, user_id, post_title
+	PostMeta
+		id, post_id, image
+	Category
+		id, name
+	PostCategory
+		id, post_id, cat_id, status
+	Tag
+		id, name
+	PostTag
+		id, post_id, tag_id, status
+	Comment
+		id, post_id, comment
+
+-> ref
+	-> https://laraveldaily.com/pivot-tables-and-many-to-many-relationships/

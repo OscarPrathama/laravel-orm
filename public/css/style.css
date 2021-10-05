@@ -1,0 +1,5 @@
+.user-container .post-wrapper,
+.user-container .user-meta-wrapper{
+    height: 200px;
+    overflow: scroll;
+}
