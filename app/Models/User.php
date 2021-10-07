@@ -50,4 +50,8 @@ class User extends Authenticatable
         return $this->hasMany(UserMeta::class);
     }
 
+    public function contact(){
+        return $this->hasOne(Contact::class);
+    }
+
 }

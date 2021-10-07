@@ -7,13 +7,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id=UserDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id=UserDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Users
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="UserDropdown">
-                        <li><a class="dropdown-item" href="#">Users</a></li>
+                        <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
                         <li><a class="dropdown-item" href="#">Roles</a></li>
                         <li><a class="dropdown-item" href="#">Permissions</a></li>
+                        <li><a class="dropdown-item" href="{{ route('contacts.index') }}">Contacts</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -21,10 +22,10 @@
                         Posts
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="PostDropdown">
-                        <li><a class="dropdown-item" href="#">Posts</a></li>
-                        <li><a class="dropdown-item" href="#">Categories</a></li>
-                        <li><a class="dropdown-item" href="#">Tags</a></li>
-                        <li><a class="dropdown-item" href="#">Comments</a></li>
+                        <li><a class="dropdown-item" href="{{ route('posts.index') }}">Posts</a></li>
+                        <li><a class="dropdown-item" href="{{ route('categories.index') }}">Categories</a></li>
+                        <li><a class="dropdown-item" href="{{ route('tags.index') }}">Tags</a></li>
+                        <li><a class="dropdown-item" href="{{ route('comments.index') }}">Comments</a></li>
                     </ul>
                 </li>
             </ul>

@@ -3,9 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\PostCategory;
 
-class PostCategorySeeder extends Seeder
+class ContactSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +13,6 @@ class PostCategorySeeder extends Seeder
      */
     public function run()
     {
-        // PostCategory::factory()
-        //     ->count(250)
-        //     ->create();
+        //
     }
 }

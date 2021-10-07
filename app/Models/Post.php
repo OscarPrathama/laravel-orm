@@ -14,12 +14,17 @@ class Post extends Model
     }
 
     public function users(){
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function categories(){
-        return $this->belongsToMany(Category::class, 'post_categories', 'post_id', 'cat_id')
+        return $this->belongsToMany(Category::class, 'post_category', 'post_id', 'cat_id')
                     ->withPivot('status')
                     ->withTimestamps();
     }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
+    }
+
 }

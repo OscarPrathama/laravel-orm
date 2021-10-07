@@ -11,14 +11,17 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th style="width: 30%">User</th>
-                        <th style="width: 55%">Posts</th>
-                        <th style="width: 15%">User Metas</th>
+                        <td>#</td>
+                        <th>User</th>
+                        <th style="width: 35%">Posts</th>
+                        <th>User Metas (Location)</th>
+                        <th>Phone</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
+                    @foreach ($users as $key => $user)
                         <tr>
+                            <td> <b>{{ ++$key }}</b> </td>
                             <td>
                                 {{ $user->name }} <br>
                                 ({{ count($user->posts) }} posts) <br>
@@ -57,6 +60,7 @@
                                     @endforelse
                                 </ol>
                             </td>
+                            <td>{{ $user->contact->phone }}</td>
                         </tr>
                     @endforeach
                 </tbody>

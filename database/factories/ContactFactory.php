@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\{ Post, Category, PostCategory };
+use App\Models\{User, Contact};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostCategoryFactory extends Factory
+class ContactFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = PostCategory::class;
+    protected $model = Contact::class;
 
     /**
      * Define the model's default state.
@@ -21,10 +21,11 @@ class PostCategoryFactory extends Factory
      */
     public function definition()
     {
+        $users = User::all();
         return [
-            // 'post_id' => Post::all()->random()->id,
-            // 'cat_id' => Category::all()->random()->id,
-            // 'status' => $this->faker->randomElement(['draft', 'publish', 'pending']),
+            // 'user_id' => User::factory()->create()->id,
+            'user_id' => $this->faker->unique()->numberBetween(1, $users->count()),
+            'phone' => $this->faker->phoneNumber,
         ];
     }
 }

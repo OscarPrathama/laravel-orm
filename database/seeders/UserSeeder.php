@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use App\Models\{User, Contact};
 
 class UserSeeder extends Seeder
 {
@@ -14,7 +14,9 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        // User::factory()->count(5)->create();
         User::factory()
+            ->has(Contact::factory()->count(1))
             ->count(5)
             ->create();
     }
